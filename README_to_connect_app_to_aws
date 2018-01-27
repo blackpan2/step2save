@@ -1,0 +1,9 @@
+Putting some info here as I set up the AWS backend. A little bit of work will be need to be done in xcode
+
+
+* Move the awsconfiguration.json file into your project. It should go into the same directory that has the "info.plist" file
+
+
+* Go to this link:
+https://docs.aws.amazon.com/aws-mobile/latest/developerguide/getting-started.html#connect-to-your-backend
+Follow the instructions for the iOS-Swift tab
