@@ -76,7 +76,7 @@ a {
 a:focus, 
 a:hover {
     text-decoration: none;
-    color: #00ceb8;
+    color: #efa00b;
 }
 
 .img_res{
@@ -167,7 +167,7 @@ a:hover {
     height: 100%;
     margin-right: -260px;
     overflow-y: auto;
-    background: #00967f;
+    background: #efa00b;
     z-index: 99999999;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
@@ -200,7 +200,7 @@ a:hover {
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #81F89D;
+    color: #efa00b;
 }
 
 .sidebar-nav li a:active,
@@ -285,7 +285,7 @@ a:hover {
     top:0; 
     left:0;
     width: 100%; 
-    background-color: #00967f;
+    background-color: #efa00b;
     padding: 0px;
 }
 .logo {
@@ -311,8 +311,8 @@ a:hover {
     padding-top: 15px;
 }
 .store-btn:hover,#menu-toggle:hover {
-    background: #00ceb8;
-    border-color: #00ceb8;
+    background: #efa00b;
+    border-color: #f17105;
     color: #fff;
 }
 
@@ -321,7 +321,7 @@ a:hover {
 /////////////////////////////////////////////////////////////////////*/
 
 #banner {
-    background: url(../img/bg.jpg);
+    background: url(../img/wegmans.jpg);
     background-size: cover;
     padding-top: 80px;
     background-attachment: fixed;
@@ -329,8 +329,10 @@ a:hover {
 }
 
 .headings {
-    padding: 25% 0 30% 0;
+    margin: 25% 0 30% 0;
     color: #fff;
+    background: rgba(0,0,0,0.5);
+    padding: 2.5% 5% 3%;
 }
 .headings h1 {
     font-size: 40px;
@@ -350,8 +352,8 @@ a:hover {
     padding: 20px 30px 0px 30px;
 }
 .store:hover{
-    background: #00ceb8;
-    border-color: #00ceb8;
+    background: #efa00b;
+    border-color: #f17105;
     color: #fff; 
 }
 .polo-btn i {
@@ -437,7 +439,7 @@ a:hover {
 
 .gallery-nav:hover,.gallery-nav:focus,.gallery-nav:active {
     color: #fff;
-    background:#6ecba9;
+    background:#efa00b;
 }
 
 
@@ -489,7 +491,7 @@ a:hover {
 }
 .facebook a i:hover {
     color: #fff;
-    background-color: #3B5998;
+    background-color: #efa00b;
 }
 .linkedin a i {
     color: #007bb6;
@@ -875,3 +877,4 @@ input:-moz-placeholder, textarea:-moz-placeholder {
         padding: 5px 0px;
     }
 }
+
