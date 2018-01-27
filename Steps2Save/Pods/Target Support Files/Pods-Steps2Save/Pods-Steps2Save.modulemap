@@ -1,0 +1,6 @@
+framework module Pods_Steps2Save {
+  umbrella header "Pods-Steps2Save-umbrella.h"
+
+  export *
+  module * { export * }
+}
