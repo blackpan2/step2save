@@ -12,6 +12,7 @@ import SwiftSpinner
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var shopButton: UIButton!
+    @IBOutlet weak var scanButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,11 @@ class WelcomeViewController: UIViewController {
         shopButton.layer.cornerRadius = 5
         shopButton.layer.borderWidth = 2
         shopButton.layer.borderColor = UIColor.white.cgColor
+        
+        scanButton.backgroundColor = .clear
+        scanButton.layer.cornerRadius = 5
+        scanButton.layer.borderWidth = 2
+        scanButton.layer.borderColor = UIColor.white.cgColor
     }
     
     @IBAction func shopButtonTapped(_ sender: Any) {
@@ -28,6 +34,10 @@ class WelcomeViewController: UIViewController {
             self.performSegue(withIdentifier: "start", sender: self)
             SwiftSpinner.hide()
         }
+    }
+    
+    @IBAction func scanButtonTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "scan", sender: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -8,6 +8,7 @@
 
 import UIKit
 import PMAlertController
+import AudioToolbox
 
 class ShoppingViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class ShoppingViewController: UIViewController {
     var isPaused = false
     var stepsToMax = 0
     var timer = Timer()
+    var couponCount = 0
+    var coupons = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,15 @@ class ShoppingViewController: UIViewController {
         increaseStep()
         progressView.setProgress(Float(steps / 100), animated: true)
         progressView.transform = progressView.transform.scaledBy(x: 1, y: 4)
+        coupons.append("Get $0.75 off Wegmans Brand Ricotta!")
+        coupons.append("Get $0.75 off Green Beans!")
+        coupons.append("Get $1 off Whole Grain Cereal!")
+        coupons.append("Get $0.50 off Wegmans Brand Cheese!")
+        coupons.append("Get $0.50 off Oranges!")
+        coupons.append("Get $0.25 off Milk!")
+        coupons.append("Get $2 off 2 lbs of Salmon!")
+        coupons.append("Get $1 off Wegmans Sushi!")
+        coupons.append("Get $0.10 off Wegmans Brand Mac and Cheese!")
     }
     
     @IBAction func closeTapped(_ sender: Any) {
@@ -42,21 +54,28 @@ class ShoppingViewController: UIViewController {
         timer.invalidate()
         isPaused = true
         
-        let alertVC = PMAlertController(title: "New Coupon", description: "Get $0.50 off Wegmans brand cheese!", image: UIImage(named: "coupons"), style: .alert)
+        if couponCount == 9 {
+            couponCount = 0
+        }
+        
+        let alertVC = PMAlertController(title: "New Coupon", description: coupons[couponCount], image: UIImage(named: "coupons"), style: .alert)
         
         alertVC.addAction(PMAlertAction(title: "Add to Wallet", style: .default, action: { () in
             print("Capture action OK")
             self.timer = Timer.scheduledTimer(timeInterval: 0.33, target: self,   selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
             self.isPaused = false
+            self.couponCount += 1
         }))
         
         alertVC.addAction(PMAlertAction(title: "No Thanks", style: .cancel, action: { () -> Void in
             print("Capture action Cancel")
             self.timer = Timer.scheduledTimer(timeInterval: 0.33, target: self,   selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
             self.isPaused = false
+            self.couponCount += 1
         }))
         
         self.present(alertVC, animated: true, completion: nil)
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate)) 
     }
     
     @objc func increaseStep() {

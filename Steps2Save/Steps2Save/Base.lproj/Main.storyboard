@@ -48,19 +48,36 @@
                                     <action selector="shopButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="fzB-tk-9Bb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svd-jB-Ga3">
+                                <rect key="frame" x="75" y="537" width="225" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="0Wh-5p-uuI"/>
+                                    <constraint firstAttribute="height" constant="70" id="9pq-UV-RW7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Scan Item">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="LE2-eu-Ag2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Xqz-xz-HgC" firstAttribute="top" secondItem="xZ5-sf-MAm" secondAttribute="bottom" constant="-354" id="5ef-2d-zr0"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="svd-jB-Ga3" secondAttribute="trailing" constant="75" id="9CW-K1-EZC"/>
                             <constraint firstItem="xZ5-sf-MAm" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="FvV-cQ-JgU"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="JD1-32-o9l" secondAttribute="trailing" constant="46" id="GEx-VJ-rRP"/>
                             <constraint firstItem="QlJ-Nx-3EX" firstAttribute="top" secondItem="JD1-32-o9l" secondAttribute="bottom" constant="19" id="GWW-JI-Bes"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="top" secondItem="Xqz-xz-HgC" secondAttribute="top" constant="60" id="Olx-GW-nzq"/>
+                            <constraint firstItem="svd-jB-Ga3" firstAttribute="top" secondItem="QlJ-Nx-3EX" secondAttribute="bottom" constant="20" id="QUW-eg-wC1"/>
                             <constraint firstItem="JD1-32-o9l" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="45" id="TQz-Gj-fGU"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="Xqz-xz-HgC" secondAttribute="bottom" id="U2H-Lw-qQL"/>
                             <constraint firstItem="QlJ-Nx-3EX" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="dmK-1n-9ll"/>
                             <constraint firstItem="Xqz-xz-HgC" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="fPJ-jZ-dEe"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Xqz-xz-HgC" secondAttribute="trailing" id="kPx-ru-zgz"/>
+                            <constraint firstItem="svd-jB-Ga3" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="75" id="pQp-Rn-9hz"/>
                             <constraint firstItem="JD1-32-o9l" firstAttribute="top" secondItem="xZ5-sf-MAm" secondAttribute="bottom" constant="29" id="xh7-81-0ps"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
@@ -68,6 +85,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="cart" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="r8L-Ko-CZN"/>
                     <connections>
+                        <outlet property="scanButton" destination="svd-jB-Ga3" id="HEk-Th-OyH"/>
                         <outlet property="shopButton" destination="QlJ-Nx-3EX" id="MQa-wh-UzM"/>
                         <segue destination="9e1-Of-4nR" kind="show" identifier="start" id="gwl-NW-o99"/>
                     </connections>
@@ -450,6 +468,12 @@
                                     <action selector="closeTapped:" destination="3SL-1J-UNN" eventType="touchUpInside" id="wrV-5n-TU9"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list" translatesAutoresizingMaskIntoConstraints="NO" id="F3t-pz-CX8">
+                                <rect key="frame" x="51" y="397" width="268" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="303" id="jUf-Ig-iMh"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -458,6 +482,8 @@
                             <constraint firstItem="Lh6-lG-jtr" firstAttribute="leading" secondItem="Wwc-xQ-AXH" secondAttribute="trailing" constant="-64" id="8az-vl-opQ"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="UgA-KN-Wwq" secondAttribute="trailing" constant="56" id="8dk-AX-c85"/>
                             <constraint firstItem="XWD-vx-slA" firstAttribute="top" secondItem="tdu-e4-1Vj" secondAttribute="bottom" constant="92" id="8hb-5z-Cuu"/>
+                            <constraint firstItem="F3t-pz-CX8" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" constant="51" id="9JT-IL-tBr"/>
+                            <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="F3t-pz-CX8" secondAttribute="trailing" constant="56" id="Cjw-xV-OUG"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="top" secondItem="Lh6-lG-jtr" secondAttribute="top" constant="80" id="E2F-z0-S7a"/>
                             <constraint firstItem="UgA-KN-Wwq" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" constant="51" id="E5B-RS-MMJ"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="XWD-vx-slA" secondAttribute="trailing" constant="56" id="EPq-Pc-9pJ"/>
@@ -469,6 +495,7 @@
                             <constraint firstItem="Fb3-B6-BGB" firstAttribute="top" secondItem="tdu-e4-1Vj" secondAttribute="bottom" constant="59" id="eqa-dv-ayy"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="Lh6-lG-jtr" secondAttribute="trailing" id="i1A-z4-O9a"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="Fb3-B6-BGB" secondAttribute="trailing" constant="93" id="irt-xE-jMC"/>
+                            <constraint firstItem="F3t-pz-CX8" firstAttribute="top" secondItem="XWD-vx-slA" secondAttribute="bottom" constant="20" id="j9p-PE-urg"/>
                             <constraint firstItem="UgA-KN-Wwq" firstAttribute="top" secondItem="cKt-8W-Hcl" secondAttribute="top" constant="64" id="pao-5e-1Ha"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="M8R-te-WBY" secondAttribute="trailing" constant="16" id="rUs-Xu-Cfg"/>
                             <constraint firstItem="tdu-e4-1Vj" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" constant="51" id="uOJ-da-4eh"/>
@@ -493,6 +520,7 @@
         <image name="close" width="56" height="56"/>
         <image name="community" width="30" height="22"/>
         <image name="compass" width="30" height="30"/>
+        <image name="list" width="344" height="366"/>
         <image name="logo" width="2000" height="2000"/>
         <image name="wallet" width="49" height="43"/>
     </resources>
