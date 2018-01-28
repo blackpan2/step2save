@@ -55,6 +55,12 @@ class LocatorViewController: UIViewController, MKMapViewDelegate {
                         annotation.title = "Wegmans"
                         self.map.addAnnotation(annotation)
                     }
+                    let lat = CLLocationDegrees(43.083912)
+                    let long = CLLocationDegrees(-77.67455)
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+                    annotation.title = "Sam, Sneha, and George"
+                    self.map.addAnnotation(annotation)
                 case .failure(let _):
                     print("There was an error with the Wegmans API")
                 }

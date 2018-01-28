@@ -46,7 +46,7 @@ class ShoppingViewController: UIViewController {
     }
     
     func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 0.33, target: self, selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
     }
     
     func showCoupon() {
@@ -62,14 +62,21 @@ class ShoppingViewController: UIViewController {
         
         alertVC.addAction(PMAlertAction(title: "Add to Wallet", style: .default, action: { () in
             print("Capture action OK")
-            self.timer = Timer.scheduledTimer(timeInterval: 0.33, target: self,   selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self,   selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
+            self.isPaused = false
+            self.couponCount += 1
+        }))
+        
+        alertVC.addAction(PMAlertAction(title: "Give to a Friend", style: .default, action: { () in
+            print("Capture action OK")
+            self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self,   selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
             self.isPaused = false
             self.couponCount += 1
         }))
         
         alertVC.addAction(PMAlertAction(title: "No Thanks", style: .cancel, action: { () -> Void in
             print("Capture action Cancel")
-            self.timer = Timer.scheduledTimer(timeInterval: 0.33, target: self,   selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self,   selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
             self.isPaused = false
             self.couponCount += 1
         }))
