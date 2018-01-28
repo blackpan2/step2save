@@ -1,89 +1,65 @@
+import random
+import string
+import database
+
 import connexion
 from swagger_server.models.coupon import Coupon
 from swagger_server.models.error import Error
-from swagger_server.models.search_results import SearchResults
-from swagger_server.models.street_address import StreetAddress
+from swagger_server.models.product import Product
 from datetime import date, datetime
 from typing import List, Dict
 from six import iteritems
 from ..util import deserialize_date, deserialize_datetime
-import database
 
-def add_get(userId, SKU):
+
+def add_get(userId, productName, sku):
     """
     Adds an item to a user&#39;s shopping cart
-    
+
     :param userId: Customer userId
     :type userId: str
-    :param SKU: SKU of product to be added
-    :type SKU: str
+    :param productName: The name of the product
+    :type productName: str
+    :param sku: SKU of product to be added
+    :type sku: str
 
-    :rtype: None
+    :rtype: Product
     """
-    database.addProduct(userId, SKU)
-
-
-def arrival_get(latitude, longitude):
-    """
-    Check if device is located at a Wegman&#39;s store.
-    
-    :param latitude: Latitude component of location.
-    :type latitude: float
-    :param longitude: Longitude component of location.
-    :type longitude: float
-
-    :rtype: bool
-    """
-    return 'do some magic!'
+    database.addProductToCollection(sku, productName)
+    database.addProductToCart(userId, sku)
+    return Product(productName, sku)
 
 
 def coupon_get(userId):
     """
     Get a coupon for a customer
-    
+
     :param userId: Customer userId
     :type userId: str
 
     :rtype: Coupon
     """
-    return 'do some magic!'
+    items = database.getCart(userId)
+    if len(items) == 0:
+        return Error(400, "Nothing in cart", "Add something to your cart to be able to get a coupon")
+    item = items[random.randint(0, len(items) - 1)]
+    coupon_code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
+    return Coupon("Save $" + random.randint(1, 11).__str__() + ".00 on " + database.getProductFromCollection(item),
+                  coupon_code)
 
 
-def nearest_get(latitude, longitude):
-    """
-    Find the nearest Wegman&#39;s Location
-    
-    :param latitude: Latitude component of location.
-    :type latitude: float
-    :param longitude: Longitude component of location.
-    :type longitude: float
-
-    :rtype: StreetAddress
-    """
-    return 'do some magic!'
-
-
-def remove_get(userId, SKU):
+def remove_get(userId, productName, sku):
     """
     Remove Item from a user&#39;s shopping cart
-    
-    :param userId: Customer UID
+
+    :param userId: Customer userId
     :type userId: str
-    :param SKU: SKU of product to be removed
-    :type SKU: str
+    :param productName: The name of the product
+    :type productName: str
+    :param sku: SKU of product to be removed
+    :type sku: str
 
-    :rtype: None
+    :rtype: Product
     """
-    database.remove(userId, SKU)
-
-
-def search_get(criteria):
-    """
-    Pass through for the Wegman&#39;s \&quot;Products_SearchProducts\&quot; endpoint
-    
-    :param criteria: The search criteria.
-    :type criteria: str
-
-    :rtype: SearchResults
-    """
-    return 'do some magic!'
+    database.removeProductFromCart(userId, sku)
+    return Product(productName, sku)

@@ -1,92 +1,16 @@
 ---
 swagger: "2.0"
 info:
-  description: "API to support the mobile applciation step2save"
+  description: "API to support the mobile application steps2save"
   version: "1.0.0"
-  title: "Step2Save Api"
-host: "step2save.me"
+  title: "Steps2Save Api"
+host: "localhost:8080"
 basePath: "/v1"
 schemes:
-- "https"
+- "http"
 produces:
 - "application/json"
 paths:
-  /arrival:
-    get:
-      summary: "Check if device is located at a Wegman's store."
-      description: ""
-      operationId: "arrival_get"
-      parameters:
-      - name: "latitude"
-        in: "query"
-        description: "Latitude component of location."
-        required: true
-        type: "number"
-        format: "double"
-      - name: "longitude"
-        in: "query"
-        description: "Longitude component of location."
-        required: true
-        type: "number"
-        format: "double"
-      responses:
-        200:
-          description: "At Store"
-          schema:
-            type: "boolean"
-        default:
-          description: "Unexpected error"
-          schema:
-            $ref: "#/definitions/Error"
-      x-swagger-router-controller: "swagger_server.controllers.default_controller"
-  /nearest:
-    get:
-      summary: "Find the nearest Wegman's Location"
-      description: ""
-      operationId: "nearest_get"
-      parameters:
-      - name: "latitude"
-        in: "query"
-        description: "Latitude component of location."
-        required: true
-        type: "number"
-        format: "double"
-      - name: "longitude"
-        in: "query"
-        description: "Longitude component of location."
-        required: true
-        type: "number"
-        format: "double"
-      responses:
-        200:
-          description: "The address of the nearest Wegman's."
-          schema:
-            $ref: "#/definitions/StreetAddress"
-        default:
-          description: "Unexpected error"
-          schema:
-            $ref: "#/definitions/Error"
-      x-swagger-router-controller: "swagger_server.controllers.default_controller"
-  /search:
-    get:
-      summary: "Pass through for the Wegman's \"Products_SearchProducts\" endpoint"
-      operationId: "search_get"
-      parameters:
-      - name: "criteria"
-        in: "query"
-        description: "The search criteria."
-        required: true
-        type: "string"
-      responses:
-        200:
-          description: "The Wegman's search results."
-          schema:
-            $ref: "#/definitions/SearchResults"
-        default:
-          description: "Unexpected error"
-          schema:
-            $ref: "#/definitions/Error"
-      x-swagger-router-controller: "swagger_server.controllers.default_controller"
   /coupon:
     get:
       summary: "Get a coupon for a customer"
@@ -99,7 +23,7 @@ paths:
         type: "string"
       responses:
         200:
-          description: "The Wegman's search results."
+          description: "New Coupon"
           schema:
             $ref: "#/definitions/Coupon"
         default:
@@ -117,14 +41,21 @@ paths:
         description: "Customer userId"
         required: true
         type: "string"
-      - name: "SKU"
+      - name: "productName"
+        in: "query"
+        description: "The name of the product"
+        required: true
+        type: "string"
+      - name: "sku"
         in: "query"
         description: "SKU of product to be added"
         required: true
         type: "string"
       responses:
         200:
-          description: "Successful operation"
+          description: "Item added successfully"
+          schema:
+            $ref: "#/definitions/Product"
         default:
           description: "Unexpected error"
           schema:
@@ -137,10 +68,15 @@ paths:
       parameters:
       - name: "userId"
         in: "query"
-        description: "Customer UID"
+        description: "Customer userId"
         required: true
         type: "string"
-      - name: "SKU"
+      - name: "productName"
+        in: "query"
+        description: "The name of the product"
+        required: true
+        type: "string"
+      - name: "sku"
         in: "query"
         description: "SKU of product to be removed"
         required: true
@@ -148,6 +84,8 @@ paths:
       responses:
         200:
           description: "Item removed succesfully"
+          schema:
+            $ref: "#/definitions/Product"
         default:
           description: "Unexpected error"
           schema:
@@ -157,35 +95,21 @@ definitions:
   Coupon:
     type: "object"
     properties:
-      name:
+      title:
         type: "string"
       coupon_code:
         type: "string"
-  StreetAddress:
+  Product:
     type: "object"
     properties:
-      street_name:
+      name:
         type: "string"
-      city:
+      sku:
         type: "string"
-      state:
-        type: "string"
-      zip:
-        type: "integer"
-  SearchResults:
-    type: "object"
-    properties:
-      product_description:
-        type: "string"
-      product_sku:
-        type: "integer"
   Error:
     type: "object"
     properties:
       code:
         type: "integer"
-        format: "int32"
       message:
-        type: "string"
-      fields:
         type: "string"

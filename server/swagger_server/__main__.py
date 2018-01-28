@@ -12,7 +12,5 @@ import database
 if __name__ == '__main__':
     app = connexion.App(__name__, specification_dir='./swagger/')
     app.app.json_encoder = JSONEncoder
-    app.add_api('swagger.yaml', arguments={'title': 'API to support the mobile applciation step2save'})
-    database.addProduct('one', 'two')
-    database.printProducts()
+    app.add_api('swagger.yaml', arguments={'title': 'API to support the mobile application steps2save'})
     app.run(port=8080)
