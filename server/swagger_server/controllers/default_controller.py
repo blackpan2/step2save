@@ -40,7 +40,9 @@ def coupon_get(userId):
     :rtype: Coupon
     """
     items = database.getCart(userId)
-    if len(items) == 0 or items is None:
+    if items is None:
+        return Error(400, "Nothing in cart", "Add something to your cart to be able to get a coupon")
+    if len(items) == 0:
         return Error(400, "Nothing in cart", "Add something to your cart to be able to get a coupon")
     item = items[random.randint(0, len(items) - 1)]
     coupon_code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
