@@ -430,17 +430,33 @@
                                 </constraints>
                                 <state key="normal" image="coupons"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next coupon coming in..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb3-B6-BGB">
+                                <rect key="frame" x="92" y="342" width="190" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="XWD-vx-slA">
+                                <rect key="frame" x="51" y="375" width="268" height="2"/>
+                                <color key="progressTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XWD-vx-slA" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" constant="51" id="084-eW-AO7"/>
                             <constraint firstItem="M8R-te-WBY" firstAttribute="top" secondItem="cKt-8W-Hcl" secondAttribute="top" id="7Hu-zI-d1r"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="UgA-KN-Wwq" secondAttribute="trailing" constant="56" id="8dk-AX-c85"/>
+                            <constraint firstItem="XWD-vx-slA" firstAttribute="top" secondItem="tdu-e4-1Vj" secondAttribute="bottom" constant="92" id="8hb-5z-Cuu"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="top" secondItem="Lh6-lG-jtr" secondAttribute="top" constant="64" id="E2F-z0-S7a"/>
                             <constraint firstItem="UgA-KN-Wwq" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" constant="51" id="E5B-RS-MMJ"/>
+                            <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="XWD-vx-slA" secondAttribute="trailing" constant="56" id="EPq-Pc-9pJ"/>
                             <constraint firstItem="Lh6-lG-jtr" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" id="K7t-b3-8gp"/>
+                            <constraint firstItem="Fb3-B6-BGB" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" constant="92" id="OfR-JN-8fH"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="tdu-e4-1Vj" secondAttribute="trailing" constant="56" id="QWc-JV-aBu"/>
                             <constraint firstItem="tdu-e4-1Vj" firstAttribute="top" secondItem="UgA-KN-Wwq" secondAttribute="bottom" id="XfD-VJ-19b"/>
+                            <constraint firstItem="Fb3-B6-BGB" firstAttribute="top" secondItem="tdu-e4-1Vj" secondAttribute="bottom" constant="59" id="eqa-dv-ayy"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="Lh6-lG-jtr" secondAttribute="trailing" id="i1A-z4-O9a"/>
+                            <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="Fb3-B6-BGB" secondAttribute="trailing" constant="93" id="irt-xE-jMC"/>
                             <constraint firstItem="UgA-KN-Wwq" firstAttribute="top" secondItem="cKt-8W-Hcl" secondAttribute="top" constant="64" id="pao-5e-1Ha"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="M8R-te-WBY" secondAttribute="trailing" id="rUs-Xu-Cfg"/>
                             <constraint firstItem="tdu-e4-1Vj" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" constant="51" id="uOJ-da-4eh"/>
@@ -449,6 +465,7 @@
                         <viewLayoutGuide key="safeArea" id="cKt-8W-Hcl"/>
                     </view>
                     <connections>
+                        <outlet property="progressView" destination="XWD-vx-slA" id="LkW-qc-efz"/>
                         <outlet property="stepCountLabel" destination="UgA-KN-Wwq" id="xeA-Ho-rSD"/>
                     </connections>
                 </viewController>
