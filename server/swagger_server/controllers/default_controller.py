@@ -47,7 +47,7 @@ def coupon_get(userId):
     if len(items) == 0:
         return Error(400, "Nothing in cart", "Add something to your cart to be able to get a coupon")
     item = items[randint(0, len(items) - 1)]
-    amount = randint(1, 11).__str__()
+    amount = randint(1, 9).__str__()
     name = database.getProductFromCollection(item)
     coupon_code = amount + "_" + item
     return Coupon("Save $0." + amount + "0 on " + name,
