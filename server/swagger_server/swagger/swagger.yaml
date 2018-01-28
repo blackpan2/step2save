@@ -4,7 +4,7 @@ info:
   description: "API to support the mobile application steps2save"
   version: "1.0.0"
   title: "Steps2Save Api"
-host: "localhost:8080"
+host: "67.205.159.190:8080"
 basePath: "/v1"
 schemes:
 - "http"
