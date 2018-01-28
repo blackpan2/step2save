@@ -706,15 +706,15 @@ p.client-name {
     margin-top: -38px;
     width: 160px;
     background: #fff;
-    color: #00ceb8;
-    border: 2px solid #00ceb8;
+    color: #efa00b;
+    border: 2px solid #f17105;
     font-size: 46px;
     padding: 0;
     margin: 0 auto;
     margin-top: -46px;
 }
 .contact-submit:hover {
-    background: #00ceb8;
+    background: #c33c54;
     color: #fff;
 }
 #contact {
@@ -746,7 +746,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 
 
 #footer {
-    background: #00967f;
+    background: #efa00b;
     padding: 20px 0px 22px 0px;
 }
 .footer-logo {
