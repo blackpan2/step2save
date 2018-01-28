@@ -10,8 +10,8 @@ from datetime import date, datetime
 from typing import List, Dict
 from six import iteritems
 
-
 # from .util import deserialize_date, deserialize_datetime
+ite = 0
 
 
 def add_get(userId, productName, sku):
@@ -31,8 +31,7 @@ def add_get(userId, productName, sku):
     database.addProductToCart(userId, sku)
     return Product(productName, sku)
 
-
-i = 0
+global ite
 def coupon_get(userId):
     """
     Get a coupon for a customer
@@ -49,7 +48,7 @@ def coupon_get(userId):
         return Error(400, "Nothing in cart", "Add something to your cart to be able to get a coupon")
     # item = items[randint(0, len(items) - 1)]
     item = items[0]
-    i += 1
+    ite += 1
     amount = randint(1, 9).__str__()
     name = database.getProductFromCollection(item)
     coupon_code = amount + "_" + item
