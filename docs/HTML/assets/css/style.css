@@ -67,6 +67,7 @@ p, a, li{
     font-family: 'Oxygen', sans-serif;
 }
 a {
+    color: white;
     transition: all 0.3s ease-out;
     position: relative;
     padding: .5em;
@@ -447,6 +448,10 @@ a:hover {
 /* ///////////////////////////////////////////////////////////////////// 
 //  09 - Team Member
 /////////////////////////////////////////////////////////////////////*/
+.team-pic {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .team-social {
     margin: 0;
