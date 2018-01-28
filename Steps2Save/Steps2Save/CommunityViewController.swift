@@ -54,6 +54,7 @@ class CommunityViewController: UITableViewController {
             return cell
         } else if indexPath.row == 1 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "topPeople", for: indexPath) as! TopCellViewController
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
             return cell
         } else {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath) as! PersonCellViewController

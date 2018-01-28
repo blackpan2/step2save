@@ -268,7 +268,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group 1" width="299" height="176"/>
+        <image name="Group 1" width="299" height="179"/>
         <image name="background" width="2000" height="4000"/>
         <image name="first" width="30" height="30"/>
         <image name="logo" width="2000" height="2000"/>
