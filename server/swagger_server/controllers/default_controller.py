@@ -47,7 +47,7 @@ def coupon_get(userId):
     item = items[randint(0, len(items) - 1)]
     amount = randint(1, 11).__str__()
     name = database.getProductFromCollection(item)
-    coupon_code = "" + amount + name
+    coupon_code = "" + amount + item
     return Coupon("Save $" + amount + ".00 on " + name,
                   coupon_code)
 
