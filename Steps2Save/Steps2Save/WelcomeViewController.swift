@@ -25,6 +25,7 @@ class WelcomeViewController: UIViewController {
         SwiftSpinner.show("Checking Location...")
         let when = DispatchTime.now() + 2
         DispatchQueue.main.asyncAfter(deadline: when) {
+            self.performSegue(withIdentifier: "start", sender: self)
             SwiftSpinner.hide()
         }
     }
