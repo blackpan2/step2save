@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftSpinner
+import BarcodeScanner
 
 class WelcomeViewController: UIViewController {
 
@@ -37,7 +38,16 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func scanButtonTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "scan", sender: self)
+        let viewController = makeBarcodeScannerController()
+        viewController.title = "Barcode Scanner"
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    
+    private func makeBarcodeScannerController() -> BarcodeScannerController {
+        let viewController = BarcodeScannerController()
+        viewController.codeDelegate = self
+        return viewController
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,5 +57,32 @@ class WelcomeViewController: UIViewController {
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+}
+
+extension WelcomeViewController: BarcodeScannerCodeDelegate {
+    func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
+        print(code)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            controller.resetWithError()
+        }
+    }
+    
+    func scanner(_ controller: BarcodeScannerController, didReceiveError error: Error) {
+        print(error)
+    }
+    
+    func scannerDidDismiss(_ controller: BarcodeScannerController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func scanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
+        print("Barcode Data: \(code)")
+        print("Symbology Type: \(type)")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            controller.reset(animated: true)
+            _ = self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 }

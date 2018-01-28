@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0393CB7FC08B43C1E2E91B58 /* Pods_Steps2Save.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFE97C1B0980A4EF73D494F /* Pods_Steps2Save.framework */; };
+		5470188A201E4C1200558750 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54701889201E4C1200558750 /* ScannerViewController.swift */; };
 		54F4970A201D747600BA4800 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F49709201D747600BA4800 /* CommunityViewController.swift */; };
 		54F4970C201D75A800BA4800 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F4970B201D75A800BA4800 /* Person.swift */; };
 		54F4970E201D767400BA4800 /* PersonCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F4970D201D767400BA4800 /* PersonCellViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		015F809B1B982813F860C233 /* Pods-Steps2Save.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steps2Save.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Steps2Save/Pods-Steps2Save.debug.xcconfig"; sourceTree = "<group>"; };
 		4780D3045DCD7A78E3934A1D /* Pods-Steps2Save.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steps2Save.release.xcconfig"; path = "Pods/Target Support Files/Pods-Steps2Save/Pods-Steps2Save.release.xcconfig"; sourceTree = "<group>"; };
+		54701889201E4C1200558750 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		54F49709201D747600BA4800 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		54F4970B201D75A800BA4800 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		54F4970D201D767400BA4800 /* PersonCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				54F4970D201D767400BA4800 /* PersonCellViewController.swift */,
 				54F4970F201D891B00BA4800 /* TopCellViewController.swift */,
 				54F49711201DB7E300BA4800 /* ShoppingListViewController.swift */,
+				54701889201E4C1200558750 /* ScannerViewController.swift */,
 				54F49713201DBE1E00BA4800 /* ShoppingViewController.swift */,
 				54F4970B201D75A800BA4800 /* Person.swift */,
 				DB1562C4201D069E00E94DE8 /* Main.storyboard */,
@@ -235,6 +238,7 @@
 				54F4970C201D75A800BA4800 /* Person.swift in Sources */,
 				54F49714201DBE1E00BA4800 /* ShoppingViewController.swift in Sources */,
 				54F4970E201D767400BA4800 /* PersonCellViewController.swift in Sources */,
+				5470188A201E4C1200558750 /* ScannerViewController.swift in Sources */,
 				54F49710201D891B00BA4800 /* TopCellViewController.swift in Sources */,
 				54F4970A201D747600BA4800 /* CommunityViewController.swift in Sources */,
 				54F49712201DB7E300BA4800 /* ShoppingListViewController.swift in Sources */,

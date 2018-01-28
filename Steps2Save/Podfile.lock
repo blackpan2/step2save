@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.5.1)
+  - BarcodeScanner (3.0.0)
   - Haneke (1.0.2)
   - PMAlertController (3.0.0)
   - SwiftSpinner (1.4.1)
@@ -7,6 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - BarcodeScanner
   - Haneke (~> 1.0.2)
   - PMAlertController
   - SwiftSpinner
@@ -14,11 +16,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  BarcodeScanner: 4ba61e8b2d50da7b17685085d4bb8e1a0c14613e
   Haneke: 01454a67322faa0dd9d81fc0f447885044e71521
   PMAlertController: 90c809d1dbf38293cfa1817da6d023314bc24075
   SwiftSpinner: bf7c13332ad008952a09358cadf24a186510ae31
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: cf28a4c08461d1e9ac6d994d2010b4d40347ff14
+PODFILE CHECKSUM: 4aa2f7b9d23adbfa929b4707f51845b614751cce
 
 COCOAPODS: 1.1.1

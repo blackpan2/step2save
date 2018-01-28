@@ -27,9 +27,9 @@ class ShoppingViewController: UIViewController {
         increaseStep()
         progressView.setProgress(Float(steps / 100), animated: true)
         progressView.transform = progressView.transform.scaledBy(x: 1, y: 4)
-        coupons.append("Get $0.75 off Wegmans Brand Ricotta!")
-        coupons.append("Get $0.75 off Green Beans!")
-        coupons.append("Get $1 off Whole Grain Cereal!")
+        coupons.append("Get $0.75 off Walnuts!")
+        coupons.append("Get $0.75 off Goat Cheese!")
+        coupons.append("Get $1 off Carrots!")
         coupons.append("Get $0.50 off Wegmans Brand Cheese!")
         coupons.append("Get $0.50 off Oranges!")
         coupons.append("Get $0.25 off Milk!")
@@ -46,7 +46,7 @@ class ShoppingViewController: UIViewController {
     }
     
     func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 0.33, target: self,   selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.33, target: self, selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
     }
     
     func showCoupon() {

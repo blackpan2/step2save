@@ -6,6 +6,7 @@ target 'Steps2Save' do
   use_frameworks!
 
   # Pods for Steps2Save
+	pod 'BarcodeScanner'
 	pod 'PMAlertController'
 	pod 'Haneke', '~> 1.0.2'
 	pod 'SwiftSpinner'
