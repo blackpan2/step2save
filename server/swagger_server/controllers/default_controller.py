@@ -32,6 +32,7 @@ def add_get(userId, productName, sku):
     return Product(productName, sku)
 
 
+i = 0
 def coupon_get(userId):
     """
     Get a coupon for a customer
@@ -41,7 +42,6 @@ def coupon_get(userId):
 
     :rtype: Coupon
     """
-    i = 0
     items = database.getCart(userId)
     if items is None:
         return Error(400, "Nothing in cart", "Add something to your cart to be able to get a coupon")
