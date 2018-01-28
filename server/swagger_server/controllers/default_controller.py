@@ -9,6 +9,8 @@ from swagger_server.models.product import Product
 from datetime import date, datetime
 from typing import List, Dict
 from six import iteritems
+
+
 # from .util import deserialize_date, deserialize_datetime
 
 
@@ -47,7 +49,7 @@ def coupon_get(userId):
     item = items[randint(0, len(items) - 1)]
     amount = randint(1, 11).__str__()
     name = database.getProductFromCollection(item)
-    coupon_code = "" + amount + item
+    coupon_code = amount + "_" + item
     return Coupon("Save $0." + amount + "0 on " + name,
                   coupon_code)
 
