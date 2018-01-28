@@ -1,4 +1,4 @@
-import random
+from random import *
 import string
 import database
 
@@ -44,9 +44,9 @@ def coupon_get(userId):
         return Error(400, "Nothing in cart", "Add something to your cart to be able to get a coupon")
     if len(items) == 0:
         return Error(400, "Nothing in cart", "Add something to your cart to be able to get a coupon")
-    item = items[random.randint(0, len(items) - 1)]
-    coupon_code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
-    return Coupon("Save $" + random.randint(1, 11).__str__() + ".00 on " + database.getProductFromCollection(item),
+    item = items[randint(0, len(items) - 1)]
+    coupon_code = ''.join(choices(string.ascii_uppercase + string.digits, k=10))
+    return Coupon("Save $" + randint(1, 11).__str__() + ".00 on " + database.getProductFromCollection(item),
                   coupon_code)
 
 
