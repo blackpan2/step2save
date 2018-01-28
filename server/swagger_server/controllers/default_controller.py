@@ -7,7 +7,7 @@ from datetime import date, datetime
 from typing import List, Dict
 from six import iteritems
 from ..util import deserialize_date, deserialize_datetime
-
+import database
 
 def add_get(userId, SKU):
     """
@@ -20,7 +20,7 @@ def add_get(userId, SKU):
 
     :rtype: None
     """
-    return 'do some magic!'
+    database.addProduct(userId, SKU)
 
 
 def arrival_get(latitude, longitude):
@@ -74,7 +74,7 @@ def remove_get(userId, SKU):
 
     :rtype: None
     """
-    return 'do some magic!'
+    database.remove(userId, SKU)
 
 
 def search_get(criteria):
