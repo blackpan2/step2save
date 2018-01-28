@@ -67,6 +67,7 @@ p, a, li{
     font-family: 'Oxygen', sans-serif;
 }
 a {
+    color: white;
     transition: all 0.3s ease-out;
     position: relative;
     padding: .5em;
@@ -81,9 +82,8 @@ a:hover {
 
 .img_res{
     display: block;
-    width: 100%;
+    width: 50%;
     height: auto;
-    max-width: 100%;
 }
 .block-title {
     font-weight: 300;
@@ -346,11 +346,12 @@ a:hover {
 }
 .hand-container {
     max-height: 630px;
+    margin: 25% 0 30% 0;
     overflow: hidden;
 }
 .iphone-hand {
-    padding: 20px 30px 0px 30px;
-}
+/*    padding: 20px 30px 0px 30px;
+*/}
 .store:hover{
     background: #efa00b;
     border-color: #f17105;
@@ -447,6 +448,10 @@ a:hover {
 /* ///////////////////////////////////////////////////////////////////// 
 //  09 - Team Member
 /////////////////////////////////////////////////////////////////////*/
+.team-pic {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .team-social {
     margin: 0;
