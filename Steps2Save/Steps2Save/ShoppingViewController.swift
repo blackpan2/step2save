@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import PMAlertController
 
 class ShoppingViewController: UIViewController {
     
     @IBOutlet weak var stepCountLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     var steps = 0
+    var isPaused = false
     var stepsToMax = 0
     var timer = Timer()
     
@@ -32,11 +34,34 @@ class ShoppingViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 0.33, target: self,   selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
     }
     
+    func showCoupon() {
+        
+        timer.invalidate()
+        isPaused = true
+        
+        let alertVC = PMAlertController(title: "New Coupon", description: "Get $0.50 off Wegmans brand cheese!", image: UIImage(named: "compass"), style: .alert)
+        
+        alertVC.addAction(PMAlertAction(title: "Add to Wallet", style: .default, action: { () in
+            print("Capture action OK")
+            self.timer = Timer.scheduledTimer(timeInterval: 0.33, target: self,   selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
+            self.isPaused = false
+        }))
+        
+        alertVC.addAction(PMAlertAction(title: "No Thanks", style: .cancel, action: { () -> Void in
+            print("Capture action Cancel")
+            self.timer = Timer.scheduledTimer(timeInterval: 0.33, target: self,   selector: (#selector(self.increaseStep)), userInfo: nil, repeats: true)
+            self.isPaused = false
+        }))
+        
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
     @objc func increaseStep() {
         steps += 1
         stepsToMax += 1
         progressView.setProgress(Float(stepsToMax) / 100.0, animated: true)
-        if (steps == 100) {
+        if (steps % 100 == 0) {
+            showCoupon()
             stepsToMax = 0
         }
         self.stepCountLabel.text = "\(steps)"

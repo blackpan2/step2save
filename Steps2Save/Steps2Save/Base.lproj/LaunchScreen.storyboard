@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="EYJ-oz-t63">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="-60" width="375" height="807"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="wfP-af-h9V">
-                                <rect key="frame" x="67" y="213" width="240" height="240"/>
+                                <rect key="frame" x="67" y="223" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="D5i-yt-Qz9"/>
                                     <constraint firstAttribute="width" constant="240" id="U4A-5E-Ryt"/>
@@ -31,11 +31,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EYJ-oz-t63" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="8oA-0H-wHa"/>
+                            <constraint firstItem="EYJ-oz-t63" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-80" id="8oA-0H-wHa"/>
                             <constraint firstItem="EYJ-oz-t63" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O7f-Pf-NcN"/>
                             <constraint firstItem="wfP-af-h9V" firstAttribute="centerX" secondItem="EYJ-oz-t63" secondAttribute="centerX" id="W5N-pK-hJT"/>
                             <constraint firstItem="wfP-af-h9V" firstAttribute="centerY" secondItem="EYJ-oz-t63" secondAttribute="centerY" id="bae-0I-hIn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EYJ-oz-t63" secondAttribute="bottom" id="c9s-CV-EbA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EYJ-oz-t63" secondAttribute="bottom" constant="-80" id="c9s-CV-EbA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EYJ-oz-t63" secondAttribute="trailing" id="kEF-qT-nPC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

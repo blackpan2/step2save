@@ -19,17 +19,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Xqz-xz-HgC">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="4" width="375" height="614"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="xZ5-sf-MAm">
-                                <rect key="frame" x="95" y="159" width="185" height="185"/>
+                                <rect key="frame" x="95" y="173" width="185" height="185"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="Ljo-IJ-xB7"/>
                                     <constraint firstAttribute="height" constant="185" id="fKH-5h-UDw"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you're at a groccery store, tap the button below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JD1-32-o9l">
+                                <rect key="frame" x="45" y="387" width="284" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlJ-Nx-3EX">
-                                <rect key="frame" x="75" y="418" width="225" height="70"/>
+                                <rect key="frame" x="75" y="447" width="225" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="cSl-ce-3y2"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="jEq-VM-Lvr"/>
@@ -42,26 +48,19 @@
                                     <action selector="shopButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="fzB-tk-9Bb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you're at a groccery store, tap the button below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JD1-32-o9l">
-                                <rect key="frame" x="45" y="373" width="284" height="55"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Xqz-xz-HgC" firstAttribute="top" secondItem="xZ5-sf-MAm" secondAttribute="bottom" constant="-354" id="5ef-2d-zr0"/>
                             <constraint firstItem="xZ5-sf-MAm" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="FvV-cQ-JgU"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="JD1-32-o9l" secondAttribute="trailing" constant="46" id="GEx-VJ-rRP"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="top" secondItem="Xqz-xz-HgC" secondAttribute="top" constant="20" id="Olx-GW-nzq"/>
+                            <constraint firstItem="QlJ-Nx-3EX" firstAttribute="top" secondItem="JD1-32-o9l" secondAttribute="bottom" constant="19" id="GWW-JI-Bes"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="top" secondItem="Xqz-xz-HgC" secondAttribute="top" constant="60" id="Olx-GW-nzq"/>
                             <constraint firstItem="JD1-32-o9l" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="45" id="TQz-Gj-fGU"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="Xqz-xz-HgC" secondAttribute="bottom" id="U2H-Lw-qQL"/>
-                            <constraint firstItem="QlJ-Nx-3EX" firstAttribute="top" secondItem="JD1-32-o9l" secondAttribute="bottom" constant="-10" id="Yh1-8h-F3b"/>
                             <constraint firstItem="QlJ-Nx-3EX" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="dmK-1n-9ll"/>
                             <constraint firstItem="Xqz-xz-HgC" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="fPJ-jZ-dEe"/>
-                            <constraint firstItem="Xqz-xz-HgC" firstAttribute="top" secondItem="xZ5-sf-MAm" secondAttribute="bottom" constant="-300" id="hED-7K-fsC"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Xqz-xz-HgC" secondAttribute="trailing" id="kPx-ru-zgz"/>
-                            <constraint firstItem="QlJ-Nx-3EX" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="119.5" id="ucc-wt-KtW"/>
                             <constraint firstItem="JD1-32-o9l" firstAttribute="top" secondItem="xZ5-sf-MAm" secondAttribute="bottom" constant="29" id="xh7-81-0ps"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
@@ -86,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ATz-9f-tN7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="-16" width="375" height="634"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a saved shopping list:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzb-RE-2Ic">
                                 <rect key="frame" x="16" y="84" width="343" height="74"/>
@@ -154,7 +153,7 @@
                             <constraint firstItem="mCy-2l-yo5" firstAttribute="trailing" secondItem="Dzb-RE-2Ic" secondAttribute="trailing" constant="16" id="CRs-UF-9q8"/>
                             <constraint firstItem="ATz-9f-tN7" firstAttribute="bottom" secondItem="mCy-2l-yo5" secondAttribute="bottom" id="Euh-Ze-27U"/>
                             <constraint firstItem="bwq-zl-yMa" firstAttribute="leading" secondItem="mCy-2l-yo5" secondAttribute="leading" constant="75" id="JE1-QX-XUa"/>
-                            <constraint firstItem="mCy-2l-yo5" firstAttribute="top" secondItem="ATz-9f-tN7" secondAttribute="top" constant="64" id="UUk-Bt-g6W"/>
+                            <constraint firstItem="mCy-2l-yo5" firstAttribute="top" secondItem="ATz-9f-tN7" secondAttribute="top" constant="80" id="UUk-Bt-g6W"/>
                             <constraint firstItem="Dzb-RE-2Ic" firstAttribute="leading" secondItem="mCy-2l-yo5" secondAttribute="leading" constant="16" id="dGl-Na-XaL"/>
                             <constraint firstItem="mCy-2l-yo5" firstAttribute="trailing" secondItem="ATz-9f-tN7" secondAttribute="trailing" id="odY-iK-T9a"/>
                             <constraint firstItem="mCy-2l-yo5" firstAttribute="trailing" secondItem="bwq-zl-yMa" secondAttribute="trailing" constant="75" id="sbo-DD-Zrv"/>
@@ -199,13 +198,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DDm-mu-j6p">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DDm-mu-j6p">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="top" secondItem="DDm-mu-j6p" secondAttribute="top" constant="20" id="595-rb-D3q"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="top" secondItem="DDm-mu-j6p" secondAttribute="top" constant="80" id="595-rb-D3q"/>
                             <constraint firstItem="DDm-mu-j6p" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="DqR-jM-Cgd"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="DDm-mu-j6p" secondAttribute="trailing" id="P09-jI-i6b"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="DDm-mu-j6p" secondAttribute="bottom" id="bb3-VH-e2Q"/>
@@ -402,7 +401,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Lh6-lG-jtr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="-16" width="375" height="634"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="420" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgA-KN-Wwq">
                                 <rect key="frame" x="51" y="128" width="268" height="134"/>
@@ -428,7 +427,7 @@
                                     <constraint firstAttribute="width" constant="63" id="MW3-Nd-Kax"/>
                                     <constraint firstAttribute="height" constant="67" id="QKj-0k-jKH"/>
                                 </constraints>
-                                <state key="normal" image="coupons"/>
+                                <state key="normal" image="wallet"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next coupon coming in..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb3-B6-BGB">
                                 <rect key="frame" x="92" y="342" width="190" height="21"/>
@@ -447,7 +446,7 @@
                             <constraint firstItem="M8R-te-WBY" firstAttribute="top" secondItem="cKt-8W-Hcl" secondAttribute="top" id="7Hu-zI-d1r"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="UgA-KN-Wwq" secondAttribute="trailing" constant="56" id="8dk-AX-c85"/>
                             <constraint firstItem="XWD-vx-slA" firstAttribute="top" secondItem="tdu-e4-1Vj" secondAttribute="bottom" constant="92" id="8hb-5z-Cuu"/>
-                            <constraint firstItem="cKt-8W-Hcl" firstAttribute="top" secondItem="Lh6-lG-jtr" secondAttribute="top" constant="64" id="E2F-z0-S7a"/>
+                            <constraint firstItem="cKt-8W-Hcl" firstAttribute="top" secondItem="Lh6-lG-jtr" secondAttribute="top" constant="80" id="E2F-z0-S7a"/>
                             <constraint firstItem="UgA-KN-Wwq" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" constant="51" id="E5B-RS-MMJ"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="XWD-vx-slA" secondAttribute="trailing" constant="56" id="EPq-Pc-9pJ"/>
                             <constraint firstItem="Lh6-lG-jtr" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" id="K7t-b3-8gp"/>
@@ -480,7 +479,7 @@
         <image name="cart" width="30" height="27"/>
         <image name="community" width="30" height="22"/>
         <image name="compass" width="30" height="30"/>
-        <image name="coupons" width="35" height="41"/>
         <image name="logo" width="2000" height="2000"/>
+        <image name="wallet" width="49" height="43"/>
     </resources>
 </document>
