@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftSpinner
-import MapKit
 
 class WelcomeViewController: UIViewController {
 
@@ -28,6 +27,11 @@ class WelcomeViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: when) {
             SwiftSpinner.hide()
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
