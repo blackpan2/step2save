@@ -41,12 +41,15 @@ def coupon_get(userId):
 
     :rtype: Coupon
     """
+    i = 0
     items = database.getCart(userId)
     if items is None:
         return Error(400, "Nothing in cart", "Add something to your cart to be able to get a coupon")
     if len(items) == 0:
         return Error(400, "Nothing in cart", "Add something to your cart to be able to get a coupon")
-    item = items[randint(0, len(items) - 1)]
+    # item = items[randint(0, len(items) - 1)]
+    item = items[0]
+    i += 1
     amount = randint(1, 9).__str__()
     name = database.getProductFromCollection(item)
     coupon_code = amount + "_" + item
