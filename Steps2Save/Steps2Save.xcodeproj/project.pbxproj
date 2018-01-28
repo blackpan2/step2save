@@ -8,9 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0393CB7FC08B43C1E2E91B58 /* Pods_Steps2Save.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFE97C1B0980A4EF73D494F /* Pods_Steps2Save.framework */; };
+		54F4970A201D747600BA4800 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F49709201D747600BA4800 /* CommunityViewController.swift */; };
+		54F4970C201D75A800BA4800 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F4970B201D75A800BA4800 /* Person.swift */; };
+		54F4970E201D767400BA4800 /* PersonCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F4970D201D767400BA4800 /* PersonCellViewController.swift */; };
+		54F49710201D891B00BA4800 /* TopCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F4970F201D891B00BA4800 /* TopCellViewController.swift */; };
+		54F49712201DB7E300BA4800 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F49711201DB7E300BA4800 /* ShoppingListViewController.swift */; };
+		54F49714201DBE1E00BA4800 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F49713201DBE1E00BA4800 /* ShoppingViewController.swift */; };
 		DB1562BF201D069E00E94DE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1562BE201D069E00E94DE8 /* AppDelegate.swift */; };
-		DB1562C1201D069E00E94DE8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1562C0201D069E00E94DE8 /* FirstViewController.swift */; };
-		DB1562C3201D069E00E94DE8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1562C2201D069E00E94DE8 /* SecondViewController.swift */; };
+		DB1562C1201D069E00E94DE8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1562C0201D069E00E94DE8 /* WelcomeViewController.swift */; };
+		DB1562C3201D069E00E94DE8 /* LocatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1562C2201D069E00E94DE8 /* LocatorViewController.swift */; };
 		DB1562C6201D069E00E94DE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1562C4201D069E00E94DE8 /* Main.storyboard */; };
 		DB1562C8201D069E00E94DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1562C7201D069E00E94DE8 /* Assets.xcassets */; };
 		DB1562CB201D069E00E94DE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1562C9201D069E00E94DE8 /* LaunchScreen.storyboard */; };
@@ -19,11 +25,17 @@
 /* Begin PBXFileReference section */
 		015F809B1B982813F860C233 /* Pods-Steps2Save.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steps2Save.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Steps2Save/Pods-Steps2Save.debug.xcconfig"; sourceTree = "<group>"; };
 		4780D3045DCD7A78E3934A1D /* Pods-Steps2Save.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steps2Save.release.xcconfig"; path = "Pods/Target Support Files/Pods-Steps2Save/Pods-Steps2Save.release.xcconfig"; sourceTree = "<group>"; };
+		54F49709201D747600BA4800 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		54F4970B201D75A800BA4800 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		54F4970D201D767400BA4800 /* PersonCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewController.swift; sourceTree = "<group>"; };
+		54F4970F201D891B00BA4800 /* TopCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCellViewController.swift; sourceTree = "<group>"; };
+		54F49711201DB7E300BA4800 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		54F49713201DBE1E00BA4800 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
 		AFFE97C1B0980A4EF73D494F /* Pods_Steps2Save.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Steps2Save.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1562BB201D069E00E94DE8 /* Steps2Save.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Steps2Save.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1562BE201D069E00E94DE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB1562C0201D069E00E94DE8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DB1562C2201D069E00E94DE8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DB1562C0201D069E00E94DE8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		DB1562C2201D069E00E94DE8 /* LocatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorViewController.swift; sourceTree = "<group>"; };
 		DB1562C5201D069E00E94DE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB1562C7201D069E00E94DE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB1562CA201D069E00E94DE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,8 +84,14 @@
 			isa = PBXGroup;
 			children = (
 				DB1562BE201D069E00E94DE8 /* AppDelegate.swift */,
-				DB1562C0201D069E00E94DE8 /* FirstViewController.swift */,
-				DB1562C2201D069E00E94DE8 /* SecondViewController.swift */,
+				DB1562C0201D069E00E94DE8 /* WelcomeViewController.swift */,
+				DB1562C2201D069E00E94DE8 /* LocatorViewController.swift */,
+				54F49709201D747600BA4800 /* CommunityViewController.swift */,
+				54F4970D201D767400BA4800 /* PersonCellViewController.swift */,
+				54F4970F201D891B00BA4800 /* TopCellViewController.swift */,
+				54F49711201DB7E300BA4800 /* ShoppingListViewController.swift */,
+				54F49713201DBE1E00BA4800 /* ShoppingViewController.swift */,
+				54F4970B201D75A800BA4800 /* Person.swift */,
 				DB1562C4201D069E00E94DE8 /* Main.storyboard */,
 				DB1562C7201D069E00E94DE8 /* Assets.xcassets */,
 				DB1562C9201D069E00E94DE8 /* LaunchScreen.storyboard */,
@@ -214,9 +232,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB1562C3201D069E00E94DE8 /* SecondViewController.swift in Sources */,
+				54F4970C201D75A800BA4800 /* Person.swift in Sources */,
+				54F49714201DBE1E00BA4800 /* ShoppingViewController.swift in Sources */,
+				54F4970E201D767400BA4800 /* PersonCellViewController.swift in Sources */,
+				54F49710201D891B00BA4800 /* TopCellViewController.swift in Sources */,
+				54F4970A201D747600BA4800 /* CommunityViewController.swift in Sources */,
+				54F49712201DB7E300BA4800 /* ShoppingListViewController.swift in Sources */,
+				DB1562C3201D069E00E94DE8 /* LocatorViewController.swift in Sources */,
 				DB1562BF201D069E00E94DE8 /* AppDelegate.swift in Sources */,
-				DB1562C1201D069E00E94DE8 /* FirstViewController.swift in Sources */,
+				DB1562C1201D069E00E94DE8 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WMSVF3JT7;
+				DEVELOPMENT_TEAM = LCB3NE4A8E;
 				INFOPLIST_FILE = Steps2Save/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snehaVaswani.Steps2Save;
@@ -371,7 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WMSVF3JT7;
+				DEVELOPMENT_TEAM = LCB3NE4A8E;
 				INFOPLIST_FILE = Steps2Save/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snehaVaswani.Steps2Save;
