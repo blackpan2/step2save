@@ -421,11 +421,11 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8R-te-WBY">
-                                <rect key="frame" x="312" y="64" width="63" height="67"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwc-xQ-AXH">
+                                <rect key="frame" x="16" y="78" width="48" height="52"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="63" id="MW3-Nd-Kax"/>
-                                    <constraint firstAttribute="height" constant="67" id="QKj-0k-jKH"/>
+                                    <constraint firstAttribute="width" constant="48" id="vwH-J0-9jy"/>
+                                    <constraint firstAttribute="height" constant="52" id="y0h-Fc-8HW"/>
                                 </constraints>
                                 <state key="normal" image="wallet"/>
                             </button>
@@ -439,11 +439,23 @@
                                 <rect key="frame" x="51" y="375" width="268" height="2"/>
                                 <color key="progressTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8R-te-WBY">
+                                <rect key="frame" x="307" y="78" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="MW3-Nd-Kax"/>
+                                    <constraint firstAttribute="height" constant="52" id="QKj-0k-jKH"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeTapped:" destination="3SL-1J-UNN" eventType="touchUpInside" id="wrV-5n-TU9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XWD-vx-slA" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" constant="51" id="084-eW-AO7"/>
-                            <constraint firstItem="M8R-te-WBY" firstAttribute="top" secondItem="cKt-8W-Hcl" secondAttribute="top" id="7Hu-zI-d1r"/>
+                            <constraint firstItem="M8R-te-WBY" firstAttribute="top" secondItem="cKt-8W-Hcl" secondAttribute="top" constant="14" id="7Hu-zI-d1r"/>
+                            <constraint firstItem="Lh6-lG-jtr" firstAttribute="leading" secondItem="Wwc-xQ-AXH" secondAttribute="trailing" constant="-64" id="8az-vl-opQ"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="UgA-KN-Wwq" secondAttribute="trailing" constant="56" id="8dk-AX-c85"/>
                             <constraint firstItem="XWD-vx-slA" firstAttribute="top" secondItem="tdu-e4-1Vj" secondAttribute="bottom" constant="92" id="8hb-5z-Cuu"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="top" secondItem="Lh6-lG-jtr" secondAttribute="top" constant="80" id="E2F-z0-S7a"/>
@@ -452,12 +464,13 @@
                             <constraint firstItem="Lh6-lG-jtr" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" id="K7t-b3-8gp"/>
                             <constraint firstItem="Fb3-B6-BGB" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" constant="92" id="OfR-JN-8fH"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="tdu-e4-1Vj" secondAttribute="trailing" constant="56" id="QWc-JV-aBu"/>
+                            <constraint firstItem="Lh6-lG-jtr" firstAttribute="top" secondItem="Wwc-xQ-AXH" secondAttribute="bottom" constant="-146" id="Ui0-nx-xLv"/>
                             <constraint firstItem="tdu-e4-1Vj" firstAttribute="top" secondItem="UgA-KN-Wwq" secondAttribute="bottom" id="XfD-VJ-19b"/>
                             <constraint firstItem="Fb3-B6-BGB" firstAttribute="top" secondItem="tdu-e4-1Vj" secondAttribute="bottom" constant="59" id="eqa-dv-ayy"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="Lh6-lG-jtr" secondAttribute="trailing" id="i1A-z4-O9a"/>
                             <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="Fb3-B6-BGB" secondAttribute="trailing" constant="93" id="irt-xE-jMC"/>
                             <constraint firstItem="UgA-KN-Wwq" firstAttribute="top" secondItem="cKt-8W-Hcl" secondAttribute="top" constant="64" id="pao-5e-1Ha"/>
-                            <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="M8R-te-WBY" secondAttribute="trailing" id="rUs-Xu-Cfg"/>
+                            <constraint firstItem="cKt-8W-Hcl" firstAttribute="trailing" secondItem="M8R-te-WBY" secondAttribute="trailing" constant="16" id="rUs-Xu-Cfg"/>
                             <constraint firstItem="tdu-e4-1Vj" firstAttribute="leading" secondItem="cKt-8W-Hcl" secondAttribute="leading" constant="51" id="uOJ-da-4eh"/>
                             <constraint firstItem="Lh6-lG-jtr" firstAttribute="bottom" secondItem="cKt-8W-Hcl" secondAttribute="bottom" id="yks-gQ-SQy"/>
                         </constraints>
@@ -477,6 +490,7 @@
         <image name="Group 1" width="299" height="179"/>
         <image name="background" width="2000" height="4000"/>
         <image name="cart" width="30" height="27"/>
+        <image name="close" width="56" height="56"/>
         <image name="community" width="30" height="22"/>
         <image name="compass" width="30" height="30"/>
         <image name="logo" width="2000" height="2000"/>

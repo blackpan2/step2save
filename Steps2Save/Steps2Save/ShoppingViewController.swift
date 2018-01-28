@@ -26,6 +26,9 @@ class ShoppingViewController: UIViewController {
         progressView.transform = progressView.transform.scaledBy(x: 1, y: 4)
     }
     
+    @IBAction func closeTapped(_ sender: Any) {
+        _ = navigationController?.popToRootViewController(animated: true)
+    }
     override func viewDidAppear(_ animated: Bool) {
         runTimer()
     }
@@ -39,7 +42,7 @@ class ShoppingViewController: UIViewController {
         timer.invalidate()
         isPaused = true
         
-        let alertVC = PMAlertController(title: "New Coupon", description: "Get $0.50 off Wegmans brand cheese!", image: UIImage(named: "compass"), style: .alert)
+        let alertVC = PMAlertController(title: "New Coupon", description: "Get $0.50 off Wegmans brand cheese!", image: UIImage(named: "coupons"), style: .alert)
         
         alertVC.addAction(PMAlertAction(title: "Add to Wallet", style: .default, action: { () in
             print("Capture action OK")
